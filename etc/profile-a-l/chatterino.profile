@@ -53,8 +53,12 @@ whitelist ${HOME}/.local/share/vlc
 #whitelist ${HOME}/Pictures/
 # For custom notification sounds, whitelist/noblacklist their path in chatterino.local.
 #whitelist ${HOME}/Music/
-# Allow common.
+# whitelist-*.inc includes
 include whitelist-common.inc
+include whitelist-run-common.inc
+include whitelist-runuser-common.inc
+include whitelist-usr-share-common.inc
+include whitelist-var-common.inc
 
 # Streamlink+VLC doesn't seem to close properly with apparmor enabled.
 #apparmor
