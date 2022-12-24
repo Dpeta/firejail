@@ -6,19 +6,6 @@ include chatterino.local
 # Persistent global definitions
 include globals.local
 
-# Allow access to Chatterino config/logs
-noblacklist ${HOME}/.local/share/chatterino
-# Allow access to pulse config
-noblacklist ${HOME}/.config/pulse
-# Config folders for common media players for streamlink integration, VLC is the default.
-noblacklist ${HOME}/.config/vlc
-noblacklist ${HOME}/.config/aacs
-noblacklist ${HOME}/.local/share/vlc
-noblacklist ${HOME}/.config/mpv
-# Image uploading and custom notification sounds require the path to the relevant files to be accessible.
-#noblacklist ${HOME}/Pictures/
-#noblacklist ${HOME}/Music/
-
 # Also allow access to mpv/vlc, they're usable via streamlink.
 noblacklist ${HOME}/.cache/vlc
 noblacklist ${HOME}/.config/aacs
@@ -82,7 +69,7 @@ notv
 nou2f
 # Netlink is required for streamlink integration.
 protocol unix,inet,inet6,netlink
-# Secomp may break browser integration.
+# Seccomp may break browser integration.
 seccomp
 seccomp.block-secondary
 tracelog
